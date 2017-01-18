@@ -23,7 +23,7 @@ var articles = {
                     </p>`
                 },
       'article-two': {
-      title: `Article Two | Aftab Zahur`,
+      title: 'Article Two | Aftab Zahur',
       heading: 'Article Two',
       date: 'Jan 20, 2016',
       content: `
@@ -85,7 +85,7 @@ app.get('/', function (req, res) {
 app.get('/:articleName', function (req, res) {
     //articleName == article-one
     //aticles[articleName] == {} content object for article one
-  var articleName = req.param.articleName;
+  var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
 });
 
